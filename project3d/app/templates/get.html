@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>{{ selected_users }}</h1>
+	
+	{% for item in test %}
+		{{ item }}
+	{% endfor %}
+{% endblock %}

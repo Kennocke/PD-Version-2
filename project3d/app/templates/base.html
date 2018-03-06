@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Администратор</title>
+      {% else %}
+      <title>Администратор</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Администратор: <a href="/index">Панель</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

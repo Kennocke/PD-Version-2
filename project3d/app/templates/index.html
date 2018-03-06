@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post" action="">
+		<table border="1" >
+			<tr>
+				<th>ДА/НЕТ</th>
+				<th>Название</th>
+				<th>Описание</th>
+			</tr>
+			{% for item_from_list_one, item_from_list_two, item_from_list_three, item_from_list_four, item_from_list_five in context.pairs %}
+				<tr align = "center">
+					<td height="50"><input type="checkbox" id="id_{{item_from_list_four}}" name="users"></td>
+					<td><a href="{{ item_from_list_one }}">{{ item_from_list_three }}</a></td>
+					<td>{{ item_from_list_two }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	<p>{{ form.submit() }}</p>
+	</form>
+	
+	{% for item in test %}
+		{{ item }}
+	{% endfor %}
+{% endblock %}
